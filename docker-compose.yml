@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  control:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ansible-control
+    privileged: true
+    volumes:
+      - ./playbooks:/playbooks
+      - ./files:/files
+      - ./hosts.ini:/etc/ansible/hosts
+    environment:
+      - ANSIBLE_HOST_KEY_CHECKING=False
+    depends_on:
+      - node1
+      - node2
+
+  node1:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: node1
+    hostname: node1
+    privileged: true
+
+  node2:
+    build:
+      context: .
+      dockerfile: Dockerfile.node
+    container_name: node2
+    hostname: node2
+    privileged: true
