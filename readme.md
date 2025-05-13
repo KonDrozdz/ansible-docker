@@ -14,7 +14,7 @@ ansible-dind-project/
 ├── files/
 │ └── index.html # Strona serwowana przez Nginx
 └── playbooks/
-└── deploy_web.yml # Playbook Ansible instalujący Nginx i kopiujący stronę
+  └── deploy_web.yml # Playbook Ansible instalujący Nginx i kopiujący stronę
 ```
 ---
 ## ▶️ Jak uruchomić
