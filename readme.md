@@ -4,8 +4,9 @@ Projekt demonstracyjny tworzący środowisko Ansible w kontenerze (`ansible-cont
 
 ---
 ## 📁 Struktura katalogu
+```text
 ansible-dind-project/
-├── Dockerfile # Kontroler z Ansible i SSH
+├── Dockerfile # Kontroler z Ansible i SSH 
 ├── Dockerfile.node # Obraz nodów z SSH i Pythonem
 ├── docker-compose.yml # Definicja usług Dockerowych
 ├── setup.sh # Skrypt inicjalizacyjny (generuje klucz, kopiuje, odpala playbook)
@@ -14,8 +15,8 @@ ansible-dind-project/
 │ └── index.html # Strona serwowana przez Nginx
 └── playbooks/
 └── deploy_web.yml # Playbook Ansible instalujący Nginx i kopiujący stronę
+```
 ---
-
 ## ▶️ Jak uruchomić
 
 1. **Zbuduj i uruchom wszystkie kontenery:**
